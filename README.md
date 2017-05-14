@@ -11,6 +11,11 @@ cd recipes-list
 ng g c recipe-item
 cd ..
 ng g cl recipe
+ng g c recipe-detail
+ng g c shopping-list
+cd shopping-list
+ng g c shopping-list-add
+ng destroy component shopping-list-add
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 

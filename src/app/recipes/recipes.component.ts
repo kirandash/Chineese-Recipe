@@ -7,7 +7,7 @@ import { Recipe } from './recipe'; // import recipe class
 })
 export class RecipesComponent implements OnInit {
 
-	selectedRecipe: Recipe;
+  selectedRecipe: Recipe;
   constructor() { }
 
   ngOnInit() {
