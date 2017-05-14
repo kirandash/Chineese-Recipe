@@ -1,8 +1,9 @@
 <div class="row">
 	<div class="col-md-5">
-		<cr-recipes-list></cr-recipes-list>
+		<cr-recipes-list (recipeSelected)="selectedRecipe = $event"></cr-recipes-list>
+		<!-- $event is the keyword used for data transmitted through event emitter	 -->
 	</div>
 	<div class="col-md-7">
-		Recipe details
+		<cr-recipe-detail [selectedRecipe]="selectedRecipe"></cr-recipe-detail>
 	</div>
 </div>
