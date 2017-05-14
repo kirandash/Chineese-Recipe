@@ -1,8 +1,16 @@
 # ChineeseRecipe
 
-# Codes
+# Codes (Angular cli)
 ng new chineese-recipe --prefix cr
 ng g c header --flat
+cd src/app
+ng g c recipes
+cd recipes
+ng g c recipes-list
+cd recipes-list
+ng g c recipe-item
+cd ..
+ng g cl recipe
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
