@@ -7,7 +7,7 @@
 	<div class="col-xs-12">
 		<ul class="list-group">
 			<!-- Loop through all recipe item -->
-			<cr-recipe-item [recipe]="recipe" (click)="onSelected(recipe)"></cr-recipe-item>
+			<cr-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe" (click)="onSelected(recipe)"></cr-recipe-item>
 			<!-- [boundproperty in recipe item]="property in recipe list" -->
 		</ul>
 	</div>
