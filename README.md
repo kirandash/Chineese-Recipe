@@ -23,3 +23,4 @@ Directives are instructions e.g. *ngFor="let item of items"
 
 2. Structural directives interact with the current view container and change the structure of the DOM/HTML code e.g. *ngFor and *ngIf
 
+ng g d dropdown
