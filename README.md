@@ -31,3 +31,6 @@ https://augury.angular.io/
 # Services
 cd recipes
 ng g s recipe
+
+cd shopping-list
+ng g s shopping-list
