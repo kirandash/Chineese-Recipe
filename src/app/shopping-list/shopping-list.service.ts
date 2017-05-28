@@ -5,7 +5,7 @@
 import { Ingredient } from '../ingredient';
 
 export class ShoppingListService {
-	private items: Ingredient[];
+	private items: Ingredient[] = [];
   constructor() { }
 
   getItems() {
@@ -13,6 +13,7 @@ export class ShoppingListService {
   }
 
   addItems(items: Ingredient[]) {
+  	// console.log(this.items);
   	Array.prototype.push.apply(this.items, items); // Equivalent to run a loop and push all the items one by one to the target array
   }
 
