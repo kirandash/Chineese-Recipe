@@ -27,3 +27,7 @@ ng g d dropdown
 
 # Angular Debugging
 https://augury.angular.io/
+
+# Services
+cd recipes
+ng g s recipe
