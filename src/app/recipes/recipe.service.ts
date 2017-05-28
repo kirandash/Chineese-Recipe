@@ -13,7 +13,11 @@ export class RecipeService {
 	    		new Ingredient('Curd', 5)
 	    	]
 	    ),
-	    new Recipe('Chicken 65', 'Spicy', 'http://indianhealthyrecipes.com/wp-content/uploads/2014/05/chicken-65-recipe.jpg', []) // the last array is for ingredient
+	    new Recipe('Chicken 65', 'Spicy', 'http://indianhealthyrecipes.com/wp-content/uploads/2014/05/chicken-65-recipe.jpg', 
+	    	[ // Ingredients array
+	    		new Ingredient('water', 4),
+	    		new Ingredient('mushroom', 1.2)
+	    	]) // the last array is for ingredient
 	  ]; // recipes array being set to an empty array which will be fed to recipe-item.component
 		// Dummy selectedrecipe
 
