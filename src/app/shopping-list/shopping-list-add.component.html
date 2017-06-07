@@ -4,12 +4,24 @@
       <div class="row">
         <div class="col-sm-5 form-group">
           <label for="item-name">Name</label>
-          <input type="text" id="item-name" required class="form-control">
+          <input 
+            type="text" 
+            id="item-name" 
+            required 
+            class="form-control"
+            ngModel
+            name="name"><!-- ngModel directive to define the field as a control and name attribute to define a name for it -->
         </div>
 
         <div class="col-sm-2 form-group">
           <label for="item-amount">Amount</label>
-          <input type="text" id="item-amount" required class="form-control">
+          <input 
+            type="text" 
+            id="item-amount" 
+            required 
+            class="form-control"
+            ngModel
+            name="amount">
         </div>
       </div>
       <div class="row">
