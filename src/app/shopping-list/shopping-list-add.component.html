@@ -9,8 +9,9 @@
             id="item-name" 
             required 
             class="form-control"
-            ngModel
+            [ngModel]="item.name"
             name="name"><!-- ngModel directive to define the field as a control and name attribute to define a name for it -->
+            <!-- ngModel one way data binding is used to display items data when selected -->
         </div>
 
         <div class="col-sm-2 form-group">
@@ -20,7 +21,7 @@
             id="item-amount" 
             required 
             class="form-control"
-            ngModel
+            [ngModel]="item.amount"
             name="amount">
         </div>
       </div>

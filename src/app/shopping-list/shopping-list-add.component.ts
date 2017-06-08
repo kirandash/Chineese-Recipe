@@ -17,6 +17,7 @@ export class ShoppingListAddComponent implements OnChanges {
 		//will be called whenever anything changes related to its component
 		if(changes.item.currentValue === null) {// means no item is selected
 			this.isAdd = true; // add mode on if no item is selected
+			this.item = { name: null, amount: null };// so that item is not null but the fields are null thus item.name wont return error on shopping-list-add.component.ts file
 		}else{
 			this.isAdd = false; // edit mode
 		}

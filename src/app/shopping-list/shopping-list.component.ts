@@ -16,7 +16,7 @@ export class ShoppingListComponent implements OnInit {
   	this.items = this.sls.getItems();
   }
 
-  onSelectItem() {
+  onSelectItem(item: Ingredient) {
   	this.selectedItem = item;
   }
 
