@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { Ingredient } from '../ingredient';
 import { ShoppingListService } from './shopping-list.service';
 
@@ -10,6 +10,7 @@ import { ShoppingListService } from './shopping-list.service';
 export class ShoppingListAddComponent implements OnChanges {
 	isAdd = true;
   	@Input() item: Ingredient;
+    @Output() cleared = new EventEmitter();
 
   constructor(private sls: ShoppingListService) { }
 
@@ -28,6 +29,7 @@ export class ShoppingListAddComponent implements OnChanges {
   	if(!this.isAdd) {
   		// Edit
       this.sls.editItem(this.item, newIngredient);
+      this.onClear();
   	}else{
   		// add
   		this.item = newIngredient;
@@ -35,4 +37,14 @@ export class ShoppingListAddComponent implements OnChanges {
   	}
   }
 
+  // delete and clear method
+  onDelete() {
+    this.sls.deleteItem(this.item);
+  }
+
+  onClear() {
+    // On clear go back to add mode and also remove the populated fields
+    this.isAdd = true; 
+    this.cleared.emit(null); // emit null
+  }
 }

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-10">
-    <cr-shopping-list-add [item]="selectedItem"></cr-shopping-list-add>
+    <cr-shopping-list-add [item]="selectedItem" (cleared)="onCleared()"></cr-shopping-list-add>
     <hr>
     <ul class="list-group">
       <a class="list-group-item" style="cursor: pointer" *ngFor="let item of items" (click)="onSelectItem(item)">{{item.name}} ({{item.amount}})</a>
